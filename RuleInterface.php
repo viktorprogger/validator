@@ -6,5 +6,7 @@ interface RuleInterface
 
     public function actualFor(string $scenario): bool;
 
+    public function addError(string $attribute, string $error): void;
+
     public function getErrors(): array;
 }

@@ -43,7 +43,7 @@ class RuleFactory
                 $rule = $this->definitions[$rule];
             }
 
-            $result = (new Factory())->create($rule);
+            $result = (new Factory())->create($rule, $params);
         }
 
         if (!$result) {

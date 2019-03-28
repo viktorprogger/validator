@@ -15,6 +15,11 @@ class Validator
         $this->factory = $factory;
     }
 
+    public function getFactory(): RuleFactory
+    {
+        return $this->factory;
+    }
+
     /**
      * @param ValidatableInterface $validatable
      *
