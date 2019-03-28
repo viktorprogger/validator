@@ -43,7 +43,9 @@ class RuleFactory
                 $rule = $this->definitions[$rule];
             }
 
-            $result = (new Factory())->create($rule, $params);
+            $config = $params;
+            $config['__class'] = $rule;
+            $result = (new Factory())->create($config);
         }
 
         if (!$result) {
