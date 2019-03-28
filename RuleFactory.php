@@ -62,7 +62,7 @@ class RuleFactory
         return new class($callable, $params) extends BaseRule
         {
             private $callable;
-            private $params;
+            public $params;
 
             public function __construct(Callable $callable, $params)
             {
